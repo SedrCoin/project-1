@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/e739b6900b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Modal window</title>
   </head>
@@ -22,6 +23,9 @@
     <!-- <div class="header">
 <h1>Choose ypur player</h1>
     </div> -->
+    <div class="header">
+      <h1>CHOOSE YOUR PLAYER</h1>
+    </div>
     <div class="main">
       <div class="button-wrapper">
         <button class="open-modal">PG</button>
@@ -31,13 +35,23 @@
         <button class="open-modal">C</button>
       </div>
     </div>
-    <div class="toggle-video">
+
+    <!-- toggles -->
+    <!-- <div class="toggle-video">
       <label class="toggle">
         <input class="toggle-checkbox" type="checkbox" />
         <div class="toggle-switch"></div>
-        <span class="toggle-label">Video</span>
       </label>
-    </div>
+    </div> -->
+
+    <div>
+      <input type="checkbox" class="checkbox" id="checkbox">
+      <label for="checkbox" class="label">
+          <i class="fa-solid fa-video-slash fa-xl"></i>
+          <i class="fa-solid fa-video fa-xl"></i>
+          <div class="ball"> </div>
+      </label>
+  </div>
 
     <!-- <div class="modal hidden">
       <button class="close-modal">&times;</button>

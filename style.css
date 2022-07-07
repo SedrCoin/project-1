@@ -10,24 +10,17 @@ html {
 }
 
 body {
+  position: relative;
   font-family: sans-serif;
   font-weight: 400;
   color: #444;
   line-height: 1.5;
   height: 100vh;
   background: rgb(29, 66, 138);
-  display: flex;
-  justify-content: center;
-  background-image: url(assets/curt-background.png);
+  background-image: url(assets/newCourt.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-header {
-  display: ;
-  color: rgb(255, 199, 44);
-  text-align: center;
 }
 
 .background-video {
@@ -43,6 +36,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .button-wrapper {
@@ -79,7 +73,6 @@ header {
 
 h1 {
   font-size: 2.5rem;
-  /* margin-bottom: 2rem; */
   text-align: center;
 }
 
@@ -128,8 +121,7 @@ p {
   background-color: rgb(246, 234, 56);
 }
 
-/* toggle */
-
+/* toggle 
 .toggle {
   cursor: pointer;
   display: inline-block;
@@ -149,7 +141,7 @@ p {
 }
 .toggle-switch:before,
 .toggle-switch:after {
-  content: '';
+  content: "";
 }
 .toggle-switch:before {
   display: block;
@@ -193,4 +185,64 @@ p {
   width: 450px;
   height: 450px;
   cursor: pointer;
+}
+*/
+
+
+
+/* toggle2 */
+
+#checkbox {
+  opacity: 0;
+  position: absolute;
+}
+input {
+  display: none;
+}
+
+.label {
+  position: absolute;
+  top: 50px;
+  right: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(177, 171, 171);
+  height: 32px;
+  width: 58px;
+  border-radius: 50px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.fa-video {
+  color: white;
+}
+
+.fa-video-slash {
+  color: #444;
+}
+
+.ball {
+  background-color: #fff;
+  top: 4px;
+  left: 4px;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(26px);
+}
+
+.checkbox:checked + .label {
+  background-color: rgb(255, 199, 44);
+}
+
+.ball:hover {
+  background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
 }
