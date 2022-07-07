@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #444;
+  line-height: 1.5;
+  height: 100vh;
+  background: rgb(29, 66, 138);
+  display: flex;
+  justify-content: center;
+  background-image: url(assets/curt-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  display: ;
+  color: rgb(255, 199, 44);
+  text-align: center;
+}
+
+.background-video {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-wrapper {
+  width: 470px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.open-modal {
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 1.75rem 3.5rem;
+  margin: 5rem 2rem;
+  border: none;
+  background-color: rgb(255, 199, 44);
+  color: #444;
+  border-radius: 10rem;
+  cursor: pointer;
+  min-width: 108.35px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+  /* margin-bottom: 2rem; */
+  text-align: center;
+}
+
+p {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/* -------------------------- */
+/* CLASSES TO MAKE MODAL WORK */
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 560px;
+  height: 412px;
+
+  background-color: white;
+  padding: 4rem;
+  border-radius: 3px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+
+  background-image: url(assets/court.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.open-modal:hover {
+  background-color: rgb(246, 234, 56);
+}
+
+/* toggle */
+
+.toggle {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.toggle-switch {
+  display: inline-block;
+  background: #ccc;
+  border-radius: 16px;
+  width: 58px;
+  height: 32px;
+  position: relative;
+  top: 10px;
+  right: 10px;
+  vertical-align: middle;
+  transition: background 0.25s;
+}
+.toggle-switch:before,
+.toggle-switch:after {
+  content: '';
+}
+.toggle-switch:before {
+  display: block;
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: left 0.25s;
+}
+.toggle:hover .toggle-switch:before {
+  background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.toggle-checkbox:checked + .toggle-switch {
+  background: rgb(255, 199, 44);
+}
+.toggle-checkbox:checked + .toggle-switch:before {
+  left: 30px;
+}
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-label {
+  font-size: 3rem;
+  font-weight: 600;
+  color: rgb(255, 199, 44);
+  border: 2px;
+  -webkit-text-stroke: 1px #444;
+}
+
+/* players  */
+.players {
+  position: relative;
+  bottom: 80px;
+  left: 17px;
+  width: 450px;
+  height: 450px;
+  cursor: pointer;
+}
